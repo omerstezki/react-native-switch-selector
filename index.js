@@ -19,6 +19,11 @@ const styles = {
     alignItems: 'center',
   },
   animated: {
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOffset: { width: 3, height: 0 },
+    shadowRadius: 10,
+    shadowOpacity: 1,
+    elevation: 1,
     borderWidth: 0,
     position: 'absolute',
   },
@@ -125,6 +130,7 @@ export default class SwitchSelector extends Component {
     const {
       style,
       textStyle,
+      buttonBackgroundStyle,
       selectedTextStyle,
       textContainerStyle,
       selectedTextContainerStyle,
@@ -247,6 +253,7 @@ export default class SwitchSelector extends Component {
                       margin: buttonMargin,
                     },
                     styles.animated,
+                    buttonBackgroundStyle
                   ]}
                 />
               )}
@@ -263,6 +270,7 @@ SwitchSelector.defaultProps = {
   style: {},
   textStyle: {},
   selectedTextStyle: {},
+  buttonBackgroundStyle: {},
   textContainerStyle: {},
   selectedTextContainerStyle: {},
   imageStyle: {},
@@ -293,6 +301,7 @@ SwitchSelector.propTypes = {
   style: PropTypes.object,
   textStyle: PropTypes.object,
   selectedTextStyle: PropTypes.object,
+  buttonBackgroundStyle: PropTypes.object,
   textContainerStyle: PropTypes.object,
   selectedTextContainerStyle: PropTypes.object,
   imageStyle: PropTypes.object,
