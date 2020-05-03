@@ -23,7 +23,6 @@ const styles = {
     shadowOffset: { width: 3, height: 0 },
     shadowRadius: 10,
     shadowOpacity: 1,
-    elevation: 1,
     borderWidth: 0,
     position: 'absolute',
   },
